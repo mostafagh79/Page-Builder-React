@@ -2,9 +2,9 @@
 
 function Button(props) {
   return (
-    <button className={`${props.className}`}>
+    <a href={props.href} className={`${props.className}`}>
         {props.content}
-    </button>
+    </a>
   )
 }
 
