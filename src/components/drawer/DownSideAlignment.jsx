@@ -10,7 +10,7 @@ import textUnderline from "../../assets/images/text-underline-thin.svg"
 
 function DownSideAlignment() {
   return (
-    <div className="flex flex-row h-fit gap-3 ml-20 mt-20">
+    <div className="flex flex-row h-fit gap-3">
         <Icon href={"#"} alt={"textalign-justifycenter"} iconSrc={textAlignJustifyCenter}></Icon>
         <Icon href={"#"} alt={"textalign-right"} iconSrc={textAlignLeft}></Icon>
         <Icon href={"#"} alt={"textalign-center"} iconSrc={textAlignCenter}></Icon>
