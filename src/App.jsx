@@ -1,9 +1,15 @@
-import Login from "./pages/login/Login"
+import { Layout } from "./layout/Layout";
+import Login from "./pages/login/Login";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
 function App() {
   return (
-    <div>
-        <Login />
-    </div>
+    <BrowserRouter>
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/layout" element={<Layout />} />
+        </Routes>
+      </BrowserRouter>
   )
 }
 

@@ -2,12 +2,80 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@layer base {
+    header {
+    @apply h-[56px] bg-white w-full shadow-xl shadow-gray-200 relative z-10;
+  }
+
+  nav {
+    @apply flex justify-between items-center h-full w-full px-4;
+  }
+   main {
+    @apply flex h-full justify-between;
+  }
+
+  h3 {
+    @apply text-lg;
+  }
+
+}
+
+
 @layer components {
     .rtl-direction {
         direction: rtl;
     }
-}
+    .side-bar {
+    @apply h-full bg-white relative shadow-xl shadow-gray-500;
+  }
+      .btn {
+    @apply p-1 border border-gray-400 rounded-lg;
+    transition: background-color 300ms;
+  }
 
+  .btn-solid {
+    @apply hover:bg-gray-200;
+  }
+  .icon {
+    @apply w-5 h-5 sm:w-6 sm:h-6;
+  }
+   .btn-full {
+    @apply w-full border border-gray-400 rounded-lg py-2 overflow-hidden;
+    transition: background-color 300ms;
+  }
+
+}
+ @layer utilities{
+  .flex--basic {
+    @apply flex flex-col
+  }
+    #templates {
+      @apply w-0 md:w-36 md:p-4 overflow-x-hidden right-0 z-10 absolute md:relative;
+      transition: all 300ms;
+    }
+
+    #templates.open {
+      @apply w-40 p-4;
+    }
+  .templates--wrapper {
+      @apply flex flex-col justify-center items-center space-y-3;
+    }
+   .nav--features {
+      @apply flex gap-3 items-center;
+    }
+
+    .nav--features--buttons {
+      @apply flex gap-1 sm:gap-2;
+    }
+     .nav--control-buttons {
+      @apply flex gap-1 sm:gap-2;
+    }
+
+    .nav--page-title {
+      @apply text-blue-700;
+    }
+ }
 
 @font-face {
   font-family: vazir;
