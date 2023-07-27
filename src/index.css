@@ -44,6 +44,22 @@
     @apply w-full border border-gray-400 rounded-lg py-2 overflow-hidden;
     transition: background-color 300ms;
   }
+  .main-wrapper {
+    @apply h-[95%] w-96 mx-auto px-2;
+  }
+   .middle-div {
+    @apply bg-white h-[90%] w-80 p-4 rounded;
+  }
+  .upload-section {
+    @apply border-2 border-dashed border-blue-400 flex justify-center items-center p-4 rounded-lg w-full h-fit flex-col space-y-2 cursor-pointer;
+  }
+  .btn-under {
+    @apply bg-gray-200 h-12 w-80 rounded-lg mt-2 text-blue-600 text-lg text-center border-2 border-white;
+  }
+   .btn-middle {
+    @apply bg-gray-200 h-8 w-8 border-[1px] border-white rounded-md text-center p-1;
+  }
+
 
 }
  @layer utilities{
