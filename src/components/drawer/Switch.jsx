@@ -10,7 +10,8 @@ function Switch() {
 
   return (
     <>
-      <label className="flex cursor-pointer select-none items-center">
+      <label className="flex cursor-pointer select-none items-center h-fit justify-between w-56 ">
+        
         <div className="relative">
           <input
             type="checkbox"
@@ -24,14 +25,11 @@ function Switch() {
             }`}
           ></div>
           <div
-            className={`switch ${
-              isChecked ? "translate-x-full" : ""
-            }`}
+            className={`switch ${isChecked ? "translate-x-full" : ""}`}
           ></div>
         </div>
       </label>
     </>
- 
   );
 }
 
