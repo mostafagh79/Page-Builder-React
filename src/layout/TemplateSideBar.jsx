@@ -6,7 +6,7 @@ function TemplateSideBar(props) {
     <section
       className={`h-full bg-white shadow-xl shadow-gray-500 ${
         props.isOpen ? "w-40 p-4" : "w-0"
-      } md:w-36 md:p-4 overflow-x-hidden right-0 z-10 absolute md:relative transition-all duration-300`}
+      } md:w-36 md:p-4 overflow-x-hidden right-0 z-10 absolute md:relative md:relative transition-all duration-300`}
     >
       <h3 className="mb-4 mt-3 whitespace-nowrap">قالب ها</h3>
       {

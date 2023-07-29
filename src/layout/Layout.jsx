@@ -36,6 +36,9 @@ function Layout() {
         ) : (
           <TemplateSideBar isOpen={false} setTemplate={setTemplate} />
         )}
+
+        <DropBox />
+
         {showSettingBar ? (
           <SettingSideBar isOpen={true}>
             {template === Templates.Buttons ? <TButtons /> : <TTexts />}
@@ -45,8 +48,6 @@ function Layout() {
             {template === Templates.Buttons ? <TButtons /> : <TTexts />}
           </SettingSideBar>
         )}
-
-        {/* <DropBox /> */}
       </main>
     </div>
   );
