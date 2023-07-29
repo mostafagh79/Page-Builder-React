@@ -1,4 +1,3 @@
-import { DownSideAlignment } from "../components/drawer/DownSideAlignment"
 import { TemplateNavbar } from "./TemplateNavbar"
 import  TemplateSideBar  from "./TemplateSideBar"
 
@@ -8,8 +7,9 @@ function Layout() {
         <TemplateNavbar/>
         <main className="relative w-full h-[calc(100%-56px)]">
           <TemplateSideBar/>
-          <DownSideAlignment/>
           </main>
+
+
     </div>
   )
 }
