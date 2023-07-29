@@ -7,9 +7,8 @@ function Layout() {
         <TemplateNavbar/>
         <main className="relative w-full h-[calc(100%-56px)]">
           <TemplateSideBar/>
-          </main>
-
-
+        </main>
+      
     </div>
   )
 }
