@@ -11,8 +11,9 @@ function Layout() {
         </main>
 
 
+
     </div>
-  )
+  );
 }
 
 export {Layout}
