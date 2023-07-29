@@ -1,4 +1,4 @@
-import { Input } from "../../components/ui/Input";
+import Input from "../../components/ui/Input";
 import { Link } from "react-router-dom";
 function Form() {
   return (
@@ -55,4 +55,4 @@ function Form() {
   );
 }
 
-export { Form };
+export default Form;

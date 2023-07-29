@@ -6,7 +6,7 @@ import template from "../assets/images/template.svg";
 import redo from "../assets/images/redo.svg";
 import undo from "../assets/images/undo.svg";
 import menu from "../assets/images/menu.svg";
-import { Icon } from "./Icon";
+import Icon from "./Icon";
 
 function TemplateNavbar(props) {
   return (
@@ -47,4 +47,4 @@ function TemplateNavbar(props) {
   );
 }
 
-export { TemplateNavbar };
+export default TemplateNavbar;

@@ -1,8 +1,7 @@
 import { useState } from "react";
 
 function Switch() {
-
-     const [isChecked, setIsChecked] = useState(false);
+  const [isChecked, setIsChecked] = useState(false);
 
   const handleCheckboxChange = () => {
     setIsChecked(!isChecked);
@@ -11,7 +10,6 @@ function Switch() {
   return (
     <>
       <label className="flex cursor-pointer select-none items-center h-fit justify-between w-56 ">
-        
         <div className="relative">
           <input
             type="checkbox"
@@ -33,4 +31,4 @@ function Switch() {
   );
 }
 
-export {Switch}
+export default Switch;

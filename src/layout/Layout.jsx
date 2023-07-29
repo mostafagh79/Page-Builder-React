@@ -1,7 +1,7 @@
 import TButtons from "../components/details/TButtons";
 import TTexts from "../components/details/TTexts";
 import SettingSideBar from "./SettingSideBar";
-import { TemplateNavbar } from "./TemplateNavbar";
+import TemplateNavbar from "./TemplateNavbar";
 import TemplateSideBar from "./TemplateSideBar";
 import { useState } from "react";
 import DropBox from "../components/drawer/DropBox";
@@ -36,7 +36,6 @@ function Layout() {
         ) : (
           <TemplateSideBar isOpen={false} setTemplate={setTemplate} />
         )}
-
         <DropBox />
 
         {showSettingBar ? (
@@ -53,4 +52,4 @@ function Layout() {
   );
 }
 
-export { Layout };
+export default Layout;

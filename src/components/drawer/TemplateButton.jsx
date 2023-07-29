@@ -11,4 +11,4 @@ function TemplateButton(props) {
   );
 }
 
-export { TemplateButton };
+export default TemplateButton;

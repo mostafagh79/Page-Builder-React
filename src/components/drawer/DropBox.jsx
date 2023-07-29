@@ -1,4 +1,4 @@
-import { DropBoxIcons } from "./DropBoxIcons";
+import DropBoxIcons from "./DropBoxIcons";
 import pen from "../../assets/images/pen.png";
 import up from "../../assets/images/up.png";
 import down from "../../assets/images/down.png";
