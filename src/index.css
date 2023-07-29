@@ -26,6 +26,9 @@
     .rtl-direction {
         direction: rtl;
     }
+    .switch{
+      @apply absolute left-1 top-1 flex h-6 w-6 items-center justify-center rounded-full bg-white transition
+    }
     .side-bar {
     @apply h-full bg-white relative shadow-xl shadow-gray-500;
   }
