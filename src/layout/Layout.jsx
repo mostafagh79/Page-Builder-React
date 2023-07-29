@@ -4,6 +4,7 @@ import SettingSideBar from "./SettingSideBar";
 import { TemplateNavbar } from "./TemplateNavbar";
 import TemplateSideBar from "./TemplateSideBar";
 import { useState } from "react";
+import DropBox from "../components/drawer/DropBox";
 
 export const Templates = {
   Buttons: "buttons",
@@ -44,6 +45,8 @@ function Layout() {
             {template === Templates.Buttons ? <TButtons /> : <TTexts />}
           </SettingSideBar>
         )}
+
+        {/* <DropBox /> */}
       </main>
     </div>
   );

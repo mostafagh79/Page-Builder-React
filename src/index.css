@@ -55,6 +55,10 @@
   .btn-middle {
     @apply bg-gray-200 h-8 w-8 border-[1px] border-white rounded-md text-center p-1;
   }
+
+  .color-box {
+    @apply rounded-lg hover:cursor-pointer h-7 w-7;
+  }
 }
 @layer utilities {
   .flex--basic {

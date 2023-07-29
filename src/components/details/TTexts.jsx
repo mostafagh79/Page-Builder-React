@@ -1,5 +1,7 @@
+import DetailTitle from "./DetailTitle";
+
 function TTexts() {
-  return <div>TTexts</div>;
+  return <DetailTitle>متن</DetailTitle>;
 }
 
 export default TTexts;

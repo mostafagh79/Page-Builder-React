@@ -52,4 +52,4 @@ function DropBox() {
   );
 }
 
-export { DropBox };
+export default DropBox;

@@ -4,7 +4,6 @@ function TemplateButton(props) {
       className="btn-solid btn-full whitespace-nowrap"
       onClick={() => {
         props.setTemplate(props.id);
-        console.log(props.id);
       }}
     >
       <p>{props.title}</p>
