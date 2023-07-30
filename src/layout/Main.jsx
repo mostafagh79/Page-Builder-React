@@ -1,10 +1,7 @@
-import React, { Children } from "react";
+import React from "react";
 import TemplateSideBar from "./TemplateSideBar";
 import PageBuilder from "../components/drawer/PageBuilder";
 import SettingSideBar from "./SettingSideBar";
-import { Templates } from "./Layout";
-import TButtons from "../components/details/TButtons";
-import TTexts from "../components/details/TText";
 import { useLocation } from "react-router-dom";
 
 function Main(props) {
