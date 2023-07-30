@@ -9,7 +9,7 @@ import textUnderline from "../../assets/images/text-underline-thin.svg";
 
 function DownSideAlignment() {
   return (
-    <div className="flex flex-row h-fit gap-3">
+    <div className="flex flex-row h-fit gap-3 mt-4">
       <Icon
         href={"#"}
         alt={"textalign-justifycenter"}

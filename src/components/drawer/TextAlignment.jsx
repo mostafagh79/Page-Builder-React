@@ -8,7 +8,7 @@ import linearFrame from "../../assets/images/linear-frame.svg";
 
 function UpsideAlignment() {
   return (
-    <div className="flex flex-row gap-3 h-fit">
+    <div className="flex flex-row gap-3 h-fit justify-between">
       <Icon href={"#"} alt={"align bottom icon"} iconSrc={alignBottom}></Icon>
       <Icon
         href={"#"}
