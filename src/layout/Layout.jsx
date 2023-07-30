@@ -9,8 +9,8 @@ export const Templates = {
 
 function Layout({ children }) {
   const [template, setTemplate] = useState(Templates.Buttons);
-  const [showTemplateBar, setShowTemplateBar] = useState(true);
-  const [showSettingBar, setShowSettingBar] = useState(true);
+  const [showTemplateBar, setShowTemplateBar] = useState(false);
+  const [showSettingBar, setShowSettingBar] = useState(false);
 
   const handleTemplateClick = useCallback(() => {
     setShowTemplateBar((prevShowTemplateBar) => !prevShowTemplateBar);

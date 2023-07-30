@@ -9,22 +9,18 @@ import textUnderline from "../../assets/images/text-underline-thin.svg";
 
 function DownSideAlignment() {
   return (
-    <div className="flex flex-row h-fit gap-3 mt-4">
+    <div className="flex justify-between gap-1 h-fit  mt-4">
       <Icon
-        href={"#"}
-        alt={"textalign-justifycenter"}
+        href="#"
+        alt="textalign-justifycenter"
         iconSrc={textAlignJustifyCenter}
       ></Icon>
-      <Icon href={"#"} alt={"textalign-right"} iconSrc={textAlignLeft}></Icon>
-      <Icon
-        href={"#"}
-        alt={"textalign-center"}
-        iconSrc={textAlignCenter}
-      ></Icon>
-      <Icon href={"#"} alt={"textalign-left"} iconSrc={textAlignRight}></Icon>
-      <Icon href={"#"} alt={"text-bold"} iconSrc={textBold}></Icon>
-      <Icon href={"#"} alt={"text-italic"} iconSrc={textItalic}></Icon>
-      <Icon href={"#"} alt={"text-underline"} iconSrc={textUnderline}></Icon>
+      <Icon href="#" alt="textalign-right" iconSrc={textAlignLeft}></Icon>
+      <Icon href="#" alt="textalign-center" iconSrc={textAlignCenter}></Icon>
+      <Icon href="#" alt="textalign-left" iconSrc={textAlignRight}></Icon>
+      <Icon href="#" alt="text-bold" iconSrc={textBold}></Icon>
+      <Icon href="#" alt="text-italic" iconSrc={textItalic}></Icon>
+      <Icon href="#" alt="text-underline" iconSrc={textUnderline}></Icon>
     </div>
   );
 }
