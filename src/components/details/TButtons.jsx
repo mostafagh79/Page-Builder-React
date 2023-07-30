@@ -14,7 +14,7 @@ function TButtons() {
       <TextAlignment />
 
       <DrawerItem title="فونت">
-        <Input />
+        <Input type="number" />
       </DrawerItem>
 
       <DrawerItem title="اندازه دکمه">
@@ -34,25 +34,25 @@ function TButtons() {
       </DrawerItem>
 
       <DrawerItem title="حاشیه">
-        <Input />
+        <Input type="number" />
       </DrawerItem>
 
       <DrawerItem title="فاصله گذاری">
-        <Input />
+        <Input type="number" />
       </DrawerItem>
 
       <DrawerItem title="گوشه ها">
         <DropDown
           items={["۲", "۴", "۶", "۸"]}
           defaultValue="۴"
-          z="9"
+          z="default"
           variant="small"
         />
       </DrawerItem>
 
       <div>
         <DrawerItem title=" متن ۱" />
-        <Input width="full" placeholder="لورم ایپسوم" />
+        <Input width="full" placeholder="لورم ایپسوم" type="text" />
         <Typography />
       </div>
 
@@ -70,7 +70,17 @@ function TButtons() {
 
       <div>
         <DrawerItem title="لینک دکمه " />
-        <Input width="full" placeholder="لینک مورد نظر خود را وارد کنید" />
+        <Input
+          width="full"
+          type="text"
+          placeholder="لینک مورد نظر خود را وارد کنید"
+        >
+          <img
+            src="../src/assets/images/link.svg"
+            alt="A link icon"
+            className="h-full w-4 mr-2"
+          />
+        </Input>
       </div>
     </div>
   );
