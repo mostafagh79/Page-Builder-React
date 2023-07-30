@@ -6,7 +6,7 @@ import lock from "../../assets/images/lock.png";
 import trash from "../../assets/images/trash.png";
 import plus from "../../assets/images/plus-sign.svg";
 
-function DropBox() {
+function PageBuilder() {
   return (
     <section id="page-builder" className="mx-auto h-full">
       <div
@@ -52,4 +52,4 @@ function DropBox() {
   );
 }
 
-export default DropBox;
+export default PageBuilder;

@@ -1,17 +1,50 @@
 import TButtons from "../components/details/TButtons";
-import TTexts from "../components/details/TTexts";
+import TTexts from "../components/details/TText";
 import SettingSideBar from "./SettingSideBar";
-import TemplateNavbar from "./TemplateNavbar";
+import Navbar from "./Navbar";
 import TemplateSideBar from "./TemplateSideBar";
 import { useState } from "react";
-import DropBox from "../components/drawer/DropBox";
+import PageBuilder from "../components/drawer/PageBuilder";
+import Main from "./Main";
 
 export const Templates = {
   Buttons: "buttons",
   Text: "text",
 };
 
-function Layout() {
+function Layout({ children }) {
+  const [template, setTemplate] = useState(Templates.Buttons);
+  const [showTemplateBar, setShowTemplateBar] = useState(true);
+  const [showSettingBar, setShowSettingBar] = useState(true);
+
+  function handleTemplateClick() {
+    setShowTemplateBar((prevShowTemplateBar) => !prevShowTemplateBar);
+  }
+
+  function handleSettingClick() {
+    setShowSettingBar((prevShowSettingBar) => !prevShowSettingBar);
+  }
+
+  return (
+    <div className="bg-gray-300 h-screen w-full">
+      <Navbar
+        setShowSetting={handleSettingClick}
+        setShowTemplate={handleTemplateClick}
+      />
+
+      <Main
+        showSettingBar={showSettingBar}
+        showTemplateBar={showTemplateBar}
+        setTemplate={setTemplate}
+        template={template}
+      >
+        {children}
+      </Main>
+    </div>
+  );
+}
+
+function Layoutt() {
   const [template, setTemplate] = useState(Templates.Buttons);
   const [showTemplateBar, setShowTemplateBar] = useState(true);
   const [showSettingBar, setShowSettingBar] = useState(true);

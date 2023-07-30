@@ -5,7 +5,7 @@ import DropDown from "../drawer/DropDown";
 import TextAlignment from "../drawer/TextAlignment";
 import ColorBox from "../drawer/ColorBox";
 
-function TTexts() {
+function TText() {
   return (
     <div className="space-y-4">
       <DetailTitle>متن</DetailTitle>
@@ -83,4 +83,4 @@ function TTexts() {
   );
 }
 
-export default TTexts;
+export default TText;
