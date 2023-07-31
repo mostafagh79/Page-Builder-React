@@ -1,4 +1,3 @@
-import DropBoxIcons from "../drawer/DropBoxIcons";
 import pen from "../../assets/images/pen.png";
 import up from "../../assets/images/up.png";
 import down from "../../assets/images/down.png";
@@ -6,6 +5,7 @@ import lock from "../../assets/images/lock.png";
 import trash from "../../assets/images/trash.png";
 import DropBox from "./DropBox";
 import Icon from "../../layout/Icon";
+import ButtonPreview from "./items/ButtonPreview";
 
 function PageBuilder(props) {
   return (
@@ -14,7 +14,7 @@ function PageBuilder(props) {
         <div>
           <div className="bg-white h-[90%] w-80 p-4 rounded">
             <DropBox title="یک قالب را بکشید و رها کنید" />
-            {props.children}
+            <ButtonPreview />
           </div>
           <button className="btn-under">+ افزودن صفحه</button>
         </div>

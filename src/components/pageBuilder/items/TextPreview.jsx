@@ -1,7 +1,6 @@
 import React from "react";
-import ItemWrapper from "./ItemWrapper";
 
-function ButtonPreview() {
+function TextPreview() {
   const style = {};
 
   return (
@@ -11,4 +10,4 @@ function ButtonPreview() {
   );
 }
 
-export default ButtonPreview;
+export default TextPreview;
