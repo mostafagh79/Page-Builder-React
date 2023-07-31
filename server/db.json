@@ -1,0 +1,48 @@
+{
+  "components": [
+    {
+      "id": "KSLDJFKSKJLLKJEWT_324KSLJA",
+      "type": "text",
+      "link": "",
+      "innerText": "",
+      "styles": {
+        "textType": "header",
+        "headerType": "",
+        "color": "",
+        "fontSize": "",
+        "lineHeight": "",
+        "alignment": "right | left | center | justify",
+        "padding": "",
+        "letterSpacing": "",
+        "typography": {
+          "bold": false,
+          "italic": false,
+          "underline": false
+        }
+      }
+    },
+    {
+      "id": "KSLDJFKSKJLLKJEWT_324KRIL",
+      "type": "button",
+      "link": "",
+      "innerText": "",
+      "styles": {
+        "fontSize": "",
+        "size": "small | medium | large",
+        "width": "small | medium | large",
+        "padding": "",
+        "letterSpacing": "",
+        "rounded": "small",
+        "alignment": "right | left | center | justify",
+        "typography": {
+          "bold": false,
+          "italic": false,
+          "underline": false
+        },
+        "backgroundColor": "",
+        "color": "",
+        "hasIcon": false
+      }
+    }
+  ]
+}

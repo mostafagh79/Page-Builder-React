@@ -1,6 +1,6 @@
 import React from "react";
 import TemplateSideBar from "./TemplateSideBar";
-import PageBuilder from "../components/drawer/PageBuilder";
+import PageBuilder from "../components/pageBuilder/PageBuilder";
 import SettingSideBar from "./SettingSideBar";
 import { useLocation } from "react-router-dom";
 import { Templates } from "./Layout";
@@ -18,7 +18,7 @@ function Main(props) {
         <TemplateSideBar isOpen={false} setTemplate={props.setTemplate} />
       )}
 
-      <PageBuilder />
+      <PageBuilder></PageBuilder>
 
       {props.showSettingBar ? (
         <SettingSideBar isOpen={true}>

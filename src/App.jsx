@@ -4,8 +4,6 @@ import ProtectedRoute from "./layout/ProtectedRoute";
 import Login from "./pages/login/Login";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import NoMatch from "./pages/noMatch/NoMatch";
-import { store } from "./store";
-import { Provider } from "react-redux";
 
 const routes = [
   {
