@@ -7,6 +7,7 @@ import NoMatch from "./pages/noMatch/NoMatch";
 import { store } from "./store";
 import { Provider } from "react-redux";
 
+
 const routes = [
   {
     path: "/buttons",
@@ -18,8 +19,11 @@ const routes = [
   },
 ];
 
+
+
 function App() {
   return (
+    
     <BrowserRouter>
       <Routes>
         <Route path="/login" index element={<Login />} />
