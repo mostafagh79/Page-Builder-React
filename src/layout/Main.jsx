@@ -3,6 +3,9 @@ import TemplateSideBar from "./TemplateSideBar";
 import PageBuilder from "../components/drawer/PageBuilder";
 import SettingSideBar from "./SettingSideBar";
 import { useLocation } from "react-router-dom";
+import { Templates } from "./Layout";
+import TButtons from "../components/details/TButtons";
+import TText from "../components/details/TText";
 
 function Main(props) {
   const pathName = useLocation().pathname.slice(1);
@@ -18,9 +21,13 @@ function Main(props) {
       <PageBuilder />
 
       {props.showSettingBar ? (
-        <SettingSideBar isOpen={true}>{props.children}</SettingSideBar>
+        <SettingSideBar isOpen={true}>
+          {props.template === Templates.Buttons ? <TButtons /> : <TText />}
+        </SettingSideBar>
       ) : (
-        <SettingSideBar isOpen={false}>{props.children}</SettingSideBar>
+        <SettingSideBar isOpen={false}>
+          {props.template === Templates.Buttons ? <TButtons /> : <TText />}
+        </SettingSideBar>
       )}
     </main>
   );

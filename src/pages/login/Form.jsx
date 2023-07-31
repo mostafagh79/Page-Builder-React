@@ -43,7 +43,7 @@ function Form() {
         </div>
 
         <Link
-          to="/buttons"
+          to="/"
           className={
             "bg-blue-600 rounded-xl hover:cursor-pointer text-white p-4 w-full text-center"
           }
