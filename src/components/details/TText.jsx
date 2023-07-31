@@ -4,6 +4,7 @@ import Input from "../drawer/Input";
 import DropDown from "../drawer/DropDown";
 import TextAlignment from "../drawer/TextAlignment";
 import ColorBox from "../drawer/ColorBox";
+import Typography from "../drawer/Typography";
 
 function TText() {
   return (
@@ -34,6 +35,8 @@ function TText() {
           placeholder="برای تغییر این متن بر روی دکمه ویرایش کلیک کنید. لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است."
         />
       </div>
+
+      <Typography />
 
       <DrawerItem title="رنگ ">
         <ColorBox />
