@@ -3,7 +3,7 @@ import { useCallback, useMemo, useState } from "react";
 import Main from "./Main";
 
 export const Templates = {
-  Buttons: "buttons",
+  Button: "button",
   Text: "text",
 };
 

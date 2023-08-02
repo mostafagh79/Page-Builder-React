@@ -1,12 +1,12 @@
 import React from "react";
 import ItemWrapper from "./ItemWrapper";
 
-function ButtonPreview() {
-  const style = {};
-
+function ButtonPreview(props) {
   return (
     <ItemWrapper>
-      <button style={style}>ButtonPreview</button>
+      <a href={props.link} className='select-none'>
+      <button style={...props.styles}>{props.innerText}</button>
+      </a>
     </ItemWrapper>
   );
 }

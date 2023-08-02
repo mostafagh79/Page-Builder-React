@@ -1,47 +1,49 @@
 {
-  "components": [
+  "settings": [
     {
-      "id": "KSLDJFKSKJLLKJEWT_324KSLJA",
-      "type": "text",
-      "link": "",
-      "innerText": "",
-      "styles": {
-        "textType": "header",
-        "headerType": "",
-        "color": "",
-        "fontSize": "",
-        "lineHeight": "",
-        "alignment": "right | left | center | justify",
-        "padding": "",
-        "letterSpacing": "",
-        "typography": {
-          "bold": false,
-          "italic": false,
-          "underline": false
-        }
+      "id": "KSLDJFKSKJLLKJEWT_32L",
+      "type": "button",
+      "props": {
+        "link": "https://google.com",
+        "innerText": "تاتنکت",
+        "hasIcon": false,
+        "styles": {
+          "fontSize": "50px",
+          "width": "250px",
+          "height": "100px",
+          "padding": "5px",
+          "letterSpacing": "1px",
+          "borderRadius": "12px",
+          "textAlign": "center",
+          "fontWeight": "normal",
+          "fontStyle": "normal",
+          "textDecoration": "none",
+          "backgroundColor": "yellow",
+          "color": "blue",
+          "borderRadious": "16px"
+        },
+        "width": "60px"
       }
     },
     {
-      "id": "KSLDJFKSKJLLKJEWT_324KRIL",
-      "type": "button",
-      "link": "",
-      "innerText": "",
-      "styles": {
-        "fontSize": "",
-        "size": "small | medium | large",
-        "width": "small | medium | large",
-        "padding": "",
-        "letterSpacing": "",
-        "rounded": "small",
-        "alignment": "right | left | center | justify",
-        "typography": {
-          "bold": false,
-          "italic": false,
-          "underline": false
-        },
-        "backgroundColor": "",
-        "color": "",
-        "hasIcon": false
+      "id": "KSLDJFKSKJLLKJEWT_324KSLJA",
+      "type": "text",
+      "props": {
+        "link": "#",
+        "innerText": "این یک متن ساختگی است. لورم ایپسوم یک متن ساختگی برای استفاده در صنعت است.",
+        "textType": "header",
+        "headerType": "",
+        "styles": {
+          "color": "red",
+          "fontSize": "۱۰px",
+          "lineHeight": "۱۰px",
+          "textAlign": "center",
+          "padding": "۲px",
+          "letterSpacing": "۱px",
+          "fontWeight": "bold",
+          "fontStyle": "italic",
+          "textDecoration": false
+        }
       }
     }
   ]

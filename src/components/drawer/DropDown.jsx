@@ -1,5 +1,21 @@
 import React, { useState } from "react";
 import { cva } from "class-variance-authority";
+import { useDispatch } from "react-redux";
+import {
+  saveSettings,
+  updateSettings,
+  updateStyle,
+} from "../../store/settingSlice";
+
+function getKeyFromValue(map, valueToFind) {
+  for (const [key, value] of map.entries()) {
+    if (value === valueToFind) {
+      return key;
+    }
+  }
+  // If the value is not found.
+  return null;
+}
 
 const dropDownButtonVariants = cva(
   "inline-flex justify-between px-2  py-2 text-sm font-medium border border-gray-300 rounded-md  focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 text-slate-700",
@@ -37,11 +53,21 @@ const dropDownBoxVariants = cva(
   }
 );
 
-const Dropdown = ({ items, defaultValue, z, variant }) => {
+const Dropdown = ({ items, z, variant, field, settings }) => {
+  const dispatch = useDispatch();
+
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => {
     setIsOpen((prevIsOpen) => !prevIsOpen);
+  };
+
+  const handleItemClick = (item) => {
+    const value = items.get(item);
+    console.log({ id: settings.id, field, value });
+    toggleDropdown();
+    dispatch(updateStyle({ id: settings.id, field, value }));
+    dispatch(saveSettings(settings.id, settings));
   };
 
   return (
@@ -52,7 +78,7 @@ const Dropdown = ({ items, defaultValue, z, variant }) => {
           onClick={toggleDropdown}
           className={dropDownButtonVariants({ variant })}
         >
-          {defaultValue}
+          {getKeyFromValue(items, settings.props.styles[field])}
           <svg
             className=" h-5 w-5"
             xmlns="http://www.w3.org/2000/svg"
@@ -71,11 +97,12 @@ const Dropdown = ({ items, defaultValue, z, variant }) => {
       {isOpen && (
         <div className={dropDownBoxVariants({ variant, z })}>
           <div>
-            {items.map((item, index) => (
+            {Array.from(items).map(([item, index]) => (
               <div
-                key={index}
+                key={item}
                 href="#"
                 className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 hover:text-gray-900 text-right"
+                onClick={() => handleItemClick(item)}
               >
                 {item}
               </div>

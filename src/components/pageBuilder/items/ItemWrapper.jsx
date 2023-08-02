@@ -5,11 +5,11 @@ import trash from "../../../assets/images/icons/trash.svg";
 
 function ItemWrapper(props) {
   return (
-    <div className="w-full relative border border-yellow-400 rounded-2xl rounded-tr-none p-2">
-      <div className="absolute border border-yellow-400 rounded-2xl rounded-br-none h-7 -top-7 flex gap-2 -right-[1px]">
-        <img className="w-5 h-5 cursor-pointer" src={trash} />
-        <img className="w-5 h-5 cursor-pointer" src={hand} />
-        <img className="w-5 h-5 cursor-pointer" src={edit} />
+    <div className="w-full relative border border-yellow-400 rounded-xl rounded-tr-none p-1 flex justify-center my-5">
+      <div className="absolute border border-yellow-400 rounded-xl rounded-br-none h-5 -top-5 flex gap-2 -right-[1px] px-[2px] items-center">
+        <img className="w-4 h-4 cursor-pointer" src={trash} />
+        <img className="w-4 h-4 cursor-pointer" src={hand} />
+        <img className="w-4 h-4 cursor-pointer" src={edit} />
       </div>
       {props.children}
     </div>

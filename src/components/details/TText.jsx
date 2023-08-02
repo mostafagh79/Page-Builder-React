@@ -5,8 +5,27 @@ import DropDown from "../drawer/DropDown";
 import TextAlignment from "../drawer/TextAlignment";
 import ColorBox from "../drawer/ColorBox";
 import Typography from "../drawer/Typography";
+import { useState } from "react";
+
+const initialState = {
+  textType: "عنوان",
+  link: "",
+  headerType: "H1",
+  innerText:
+    "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.",
+  isBold: false,
+  isItalic: false,
+  hasUnderline: false,
+  color: "balck",
+  fontSize: "26px",
+  lineHeight: "4",
+  alignment: "right",
+  padding: "4px",
+  letterSpacing: "1",
+};
 
 function TText() {
+  const [data, setdata] = useState(initialState);
   return (
     <div className="space-y-4">
       <DetailTitle>متن</DetailTitle>

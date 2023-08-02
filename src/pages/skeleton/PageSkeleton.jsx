@@ -1,4 +1,3 @@
-
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 
@@ -7,12 +6,11 @@ const highlight = {
   highlightColor: "#c9c9c9",
 };
 
-
 function PageSkeleton() {
   return (
     <div className="h-screen overflow-hidden w-full">
       <div className="relative flex h-14 w-full">
-        <Skeleton className="h-14 absolute" />
+        <Skeleton className="h-14 absolut" />
         <div className="flex justify-between w-full px-6">
           <div className="flex items-center gap-4 p-2">
             <Skeleton className="h-6 w-6" {...highlight} />
@@ -71,4 +69,4 @@ function PageSkeleton() {
   );
 }
 
-export default PageSkeleton
+export default PageSkeleton;
