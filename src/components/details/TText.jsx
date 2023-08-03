@@ -6,26 +6,30 @@ import TextAlignment from "../drawer/TextAlignment";
 import ColorBox from "../drawer/ColorBox";
 import Typography from "../drawer/Typography";
 import { useState } from "react";
-
-const initialState = {
-  textType: "عنوان",
-  link: "",
-  headerType: "H1",
-  innerText:
-    "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.",
-  isBold: false,
-  isItalic: false,
-  hasUnderline: false,
-  color: "balck",
-  fontSize: "26px",
-  lineHeight: "4",
-  alignment: "right",
-  padding: "4px",
-  letterSpacing: "1",
-};
+import { useDispatch, useSelector } from "react-redux";
+import {
+  saveSettings,
+  updateSettings,
+  updateStyle,
+} from "../../store/settingSlice";
 
 function TText() {
-  const [data, setdata] = useState(initialState);
+  const id = "KSLDJFKSKJLLKJEWT_324KSLJA";
+  const { settings: settings } = useSelector((store) => store.settings);
+  const setting = settings.find((setting) => setting.id === id);
+  const dispatch = useDispatch();
+
+  const handleSettingChange = (id, field) => (event) => {
+    const { value } = event.target;
+    dispatch(updateSettings({ id, field, value }));
+  };
+
+  const handlePixelStyleChange = (id, field) => (event) => {
+    let { value } = event.target;
+    value += "px";
+    dispatch(updateStyle({ id, field, value }));
+  };
+
   return (
     <div className="space-y-4">
       <DetailTitle>متن</DetailTitle>
@@ -33,16 +37,29 @@ function TText() {
 
       <DrawerItem title="نوع متن">
         <DropDown
-          items={["پاراگراف", "عنوان"]}
-          defaultValue="عنوان"
+          items={
+            new Map([
+              ["عنوان", "heading"],
+              ["پاراگراف", "paragraph"],
+            ])
+          }
           z="above"
+          // field="borderRadius"
+          settings={setting}
         />
       </DrawerItem>
 
       <DrawerItem title="نوع عنوان">
         <DropDown
-          items={["عنوان H1", "عنوان H2", "عنوان H3"]}
-          defaultValue="عنوان H1"
+          items={
+            new Map([
+              ["عنوان H1", "H1"],
+              ["عنوان H2", "H2"],
+              ["عنوان H3", "H3"],
+            ])
+          }
+          // field="borderRadius"
+          settings={setting}
           z="default"
         />
       </DrawerItem>
@@ -52,39 +69,73 @@ function TText() {
         <textarea
           className="h-48 resize-none w-full px-4 py-2 flex justify-center items-center border border-gray-300 rounded-lg focus:border-blue-900  focus:outline-none"
           placeholder="برای تغییر این متن بر روی دکمه ویرایش کلیک کنید. لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است."
+          onBlur={() => {
+            dispatch(saveSettings(setting.id, setting));
+          }}
+          onChange={handleSettingChange(setting.id, "innerText")}
+          value={setting.props.innerText}
         />
       </div>
 
-      <Typography />
+      <Typography setting={setting} />
 
       <DrawerItem title="رنگ ">
-        <ColorBox />
+        <ColorBox setting={setting} field="color" />
       </DrawerItem>
 
       <DrawerItem title="سایز فونت">
         <DropDown
-          items={["۱۶", "۱۸", "۲۰", "۲۲", "۲۴", "۲۶"]}
-          defaultValue="۴"
-          z="above"
+          items={
+            new Map([
+              ["۱۰", "10px"],
+              ["۱۴", "14px"],
+              ["۱۹", "19px"],
+              ["۲۵", "25px"],
+              ["۳۲", "32px"],
+              ["۴۰", "40px"],
+            ])
+          }
+          z="default"
+          field="fontSize"
+          settings={setting}
           variant="small"
         />
       </DrawerItem>
 
       <DrawerItem title="ارتفاع خطوط">
         <DropDown
-          items={["۲", "۴", "۶", "۸"]}
-          defaultValue="۴"
+          items={
+            new Map([
+              ["۱۴", "14px"],
+              ["۲۰", "20px"],
+              ["۲۸", "28px"],
+              ["۳۸", "38px"],
+              ["۵۰", "50px"],
+            ])
+          }
           z="default"
+          field="lineHeight"
+          settings={setting}
           variant="small"
         />
       </DrawerItem>
 
       <DrawerItem title="حاشیه">
-        <Input type="number" />
+        <Input
+          type="number"
+          onChange={handlePixelStyleChange(id, "padding")}
+          value={setting.props.styles.padding.slice(0, -2)}
+          setting={setting}
+        />
       </DrawerItem>
 
       <DrawerItem title="فاصله گذاری">
-        <Input type="number" />
+        <Input
+          type="number"
+          onChange={handlePixelStyleChange(id, "letterSpacing")}
+          value={setting.props.styles.letterSpacing.slice(0, -2)}
+          setting={setting}
+        />
       </DrawerItem>
 
       <div>
@@ -93,6 +144,9 @@ function TText() {
           width="full"
           type="text"
           placeholder="لینک مورد نظر خود را وارد کنید"
+          onChange={handleSettingChange(id, "link")}
+          value={setting.props.link}
+          setting={setting}
         >
           <img
             src="../src/assets/images/link.svg"

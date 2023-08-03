@@ -6,7 +6,7 @@ function TextPreview(props) {
 
   return (
     <ItemWrapper>
-      <a href={props.link} className='select-none'>
+      <a href={props.link} className='select-none' target='_blank'>
       <p style={...props.styles}>{props.innerText}</p>
       </a>
     </ItemWrapper>

@@ -29,20 +29,22 @@
       "id": "KSLDJFKSKJLLKJEWT_324KSLJA",
       "type": "text",
       "props": {
-        "link": "#",
+        "link": "https://google.com",
         "innerText": "این یک متن ساختگی است. لورم ایپسوم یک متن ساختگی برای استفاده در صنعت است.",
         "textType": "header",
         "headerType": "",
         "styles": {
           "color": "red",
-          "fontSize": "۱۰px",
-          "lineHeight": "۱۰px",
-          "textAlign": "center",
-          "padding": "۲px",
-          "letterSpacing": "۱px",
-          "fontWeight": "bold",
-          "fontStyle": "italic",
-          "textDecoration": false
+          "fontSize": "10px",
+          "lineHeight": "50px",
+          "textAlign": "justify",
+          "padding": "3px",
+          "letterSpacing": "2px",
+          "fontWeight": "normal",
+          "fontStyle": "normal",
+          "textDecoration": "none",
+          "borderRadius": "H2",
+          "undefined": "paragraph"
         }
       }
     }

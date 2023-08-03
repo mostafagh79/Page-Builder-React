@@ -64,7 +64,6 @@ const Dropdown = ({ items, z, variant, field, settings }) => {
 
   const handleItemClick = (item) => {
     const value = items.get(item);
-    console.log({ id: settings.id, field, value });
     toggleDropdown();
     dispatch(updateStyle({ id: settings.id, field, value }));
     dispatch(saveSettings(settings.id, settings));
