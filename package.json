@@ -18,6 +18,7 @@
     "axios": "^1.4.0",
     "class-variance-authority": "^0.7.0",
     "dnd-kit": "^0.0.1",
+    "dotenv": "^16.3.1",
     "install": "^0.13.0",
     "json-server": "^0.17.3",
     "npm": "^9.8.1",
