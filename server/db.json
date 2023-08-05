@@ -5,22 +5,23 @@
       "type": "button",
       "props": {
         "link": "https://google.com",
-        "innerText": "تاتنکت",
+        "innerText": "سیب",
         "hasIcon": false,
         "styles": {
           "fontSize": "50px",
-          "width": "250px",
-          "height": "100px",
-          "padding": "5px",
-          "letterSpacing": "1px",
-          "borderRadius": "12px",
+          "width": "180px",
+          "height": "70px",
+          "borderWidth": "0px",
+          "padding": "0px",
+          "borderRadius": "45px",
           "textAlign": "center",
           "fontWeight": "normal",
           "fontStyle": "normal",
           "textDecoration": "none",
-          "backgroundColor": "yellow",
-          "color": "blue",
-          "borderRadious": "16px"
+          "backgroundColor": "blue",
+          "color": "yellow",
+          "borderRadious": "16px",
+          "letterSpacing": "2px"
         },
         "width": "60px"
       }
@@ -38,8 +39,8 @@
           "fontSize": "10px",
           "lineHeight": "50px",
           "textAlign": "justify",
-          "padding": "3px",
-          "letterSpacing": "2px",
+          "borderWidth": "px",
+          "padding": "2px",
           "fontWeight": "normal",
           "fontStyle": "normal",
           "textDecoration": "none",

@@ -1,10 +1,10 @@
 export const template = [
   {
-    id: "cards",
+    id: "card",
     title: "کارت",
   },
   {
-    id: "buttons",
+    id: "button",
     title: "دکمه ها",
   },
   {

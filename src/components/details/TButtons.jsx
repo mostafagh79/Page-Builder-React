@@ -75,8 +75,8 @@ function TButtons(props) {
       <DrawerItem title="حاشیه">
         <Input
           type="number"
-          onChange={handlePixelStyleChange(id, "padding")}
-          value={setting.props.styles.padding.slice(0, -2)}
+          onChange={handlePixelStyleChange(id, "borderWidth")}
+          value={setting.props.styles.borderWidth.slice(0, -2)}
           setting={setting}
         />
       </DrawerItem>
@@ -84,8 +84,8 @@ function TButtons(props) {
       <DrawerItem title="فاصله گذاری">
         <Input
           type="number"
-          onChange={handlePixelStyleChange(id, "letterSpacing")}
-          value={setting.props.styles.letterSpacing.slice(0, -2)}
+          onChange={handlePixelStyleChange(id, "padding")}
+          value={setting.props.styles.padding.slice(0, -2)}
           setting={setting}
         />
       </DrawerItem>

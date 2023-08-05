@@ -1,0 +1,24 @@
+version: "3.8"
+services:
+  backend:
+    image: codfish/json-server
+    ports:
+      - "8000:80"
+    volumes:
+      - ../../server/db.json:/data/server/db.json
+      - ../../server:/data/server
+    environment:
+      - JSON_SERVER_WATCH=/data/server/db.json
+
+  frontend:
+    build:
+      context: ../../
+      dockerfile: ./docker/dev/Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ../..:/app
+    env_file:
+      - .env
+    depends_on:
+      - backend

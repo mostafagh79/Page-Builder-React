@@ -8,7 +8,7 @@ export const Templates = {
 };
 
 function Layout({ children }) {
-  const [template, setTemplate] = useState(Templates.Buttons);
+  const [template, setTemplate] = useState(Templates.Button);
   const [showTemplateBar, setShowTemplateBar] = useState(false);
   const [showSettingBar, setShowSettingBar] = useState(false);
 
