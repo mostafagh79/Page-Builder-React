@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  json-server:
+    image: codfish/json-server
+    volumes:
+      - ../../server:/data
+    ports:
+      - "8000:80"
+
+  app:
+    build:
+      context: ../../
+      dockerfile: docker/production/Dockerfile
+    ports:
+      - "8080:80"
