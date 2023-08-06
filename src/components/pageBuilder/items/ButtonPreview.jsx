@@ -22,11 +22,11 @@ const defaultValues = {
 };
 
 function ButtonPreview(props) {
-  const data = Object.keys(props).length === 0 ? defaultValues: props;
+  const data = Object.keys(props).length === 0 ? defaultValues : props;
   return (
     <ItemWrapper>
-      <a href={data.link} className='select-none' target='_blank'>
-      <button style={...data.styles}>{data.innerText}</button>
+      <a href={data.link} className="select-none" target="_blank">
+        <button style={data.styles}>{data.innerText}</button>
       </a>
     </ItemWrapper>
   );

@@ -18,6 +18,7 @@ export const saveSettings = createAsyncThunk(
 export const loadSettings = createAsyncThunk(
   "settings/loadSettings",
   async () => {
+    console.log(`${import.meta.env.VITE_SERVER_URL}`);
     const response = await axios.get(`${import.meta.env.VITE_SERVER_URL}`);
     return response.data;
   }
