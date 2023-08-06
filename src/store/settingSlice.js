@@ -7,10 +7,7 @@ export const saveSettings = createAsyncThunk(
     const setting = settings
       .getState()
       .settings.settings.find((setting) => setting.id === id);
-    const response = await axios.put(
-      `${import.meta.env.VITE_SERVER_URL}/${id}`,
-      setting
-    );
+    const response = await axios.put(`/api/settings/${id}`, setting);
     return response.data;
   }
 );
@@ -18,8 +15,7 @@ export const saveSettings = createAsyncThunk(
 export const loadSettings = createAsyncThunk(
   "settings/loadSettings",
   async () => {
-    console.log(`${import.meta.env.VITE_SERVER_URL}`);
-    const response = await axios.get(`${import.meta.env.VITE_SERVER_URL}`);
+    const response = await axios.get("/api/settings");
     return response.data;
   }
 );
