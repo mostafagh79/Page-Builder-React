@@ -1,29 +1,32 @@
-## Running the Project with Docker
+# Page Builder
 
-### Development Environment
+## How To Run?
+1. Clone the project
+```bash
+https://github.com/mostafagh79/Page-Builder-React.git
+```
 
-1. Make sure you have Docker installed on your system.
+2. Make sure you have Docker installed on your machine.
+3. Run Docker Engine.
+4. Open a terminal and navigate to the project directory.
 
-2. In the project root directory, run the following command to start the development server using Docker Compose:
+- For Development Server
+```bash
+cd .\docker\dev
+```
 
-docker-compose up
+( Production Currently Doesn't Working )
+- For Production Server
+```bash
+cd .\docker\production
+```
 
-3. Access your app in your web browser at: `http://localhost:3000`.
+5. Run the following command to start the server using Docker:
+```bash
+docker-compose up --build
+```
+6. Access the app by opening your browser and navigating to [localhost:3000](http://localhost:3000) for development server and to [localhost:8080](http://localhost:8080) for production server.
 
-4. To stop the development server, press `Ctrl + C` in the terminal.
+Enjoy !
 
-### Production Environment
 
-1. Build the Docker image by running the following command in the project root directory:
-
-docker build -t vitrin-with-react .
-
-2. Run a Docker container using the built image:
-
-docker run -p 80:80 vitrin-with-react
-
-3. Access your production app in your web browser at: `http://localhost`.
-
-4. To stop the container, use the following command:
-
-docker stop <container_id>
